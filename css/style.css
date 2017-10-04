@@ -1,0 +1,447 @@
+body{
+ background-image: url("../img/bg-light-4869.png");
+}
+header{
+ margin-top: 5px;
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+}
+.dws-menu *{
+ margin: 0;
+ padding: 0;
+}
+.dws-menu ul,
+.dws-menu ol{
+ list-style: none;
+}
+.dws-menu > ul{
+ display: flex;
+ justify-content: center;
+}
+.dws-menu > ul li{
+ position: relative;
+ border-right: 1px solid #c7c8ca;
+}
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+.dws-menu > ul li > a i.fa{
+ position: absolute;
+ top: 15px;
+ left: 12px;
+ font-size: 18px;
+}
+.dws-menu > ul li a{
+ display: block;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+ background: rgb(201,201,201); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(201,201,201,1) 0%, rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%, rgba(117,117,119,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 ); /* IE6-9 */
+
+ padding: 15px 30px 15px 40px;
+ font-size: 14px;
+ color: #454547;
+ text-decoration: none;
+ text-transform: uppercase;
+ transition: all 0.3s ease;
+}
+.dws-menu li a:hover{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e1e5+0,454547+2,454547+98,e0e1e5+100 */
+ background: rgb(224,225,229); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(224,225,229,1) 0%, rgba(69,69,71,1) 2%, rgba(69,69,71,1) 98%, rgba(224,225,229,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e5', endColorstr='#e0e1e5',GradientType=0 ); /* IE6-9 */
+
+ color: #ffffff;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 150px;
+ display: none;
+}
+.dws-menu li > ul li{
+ border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background: #e4e4e5;
+}
+.dws-menu li > ul li ul{
+ position: absolute;
+ right: -150px;
+ top: 0;
+}
+.dws-menu li:hover > ul{
+ display: block;
+}
+.content {
+border: 2px solid black;
+margin: 20px auto 0 auto;
+width: 75%;
+height: auto;
+background-color: white;
+text-align: center;
+}
+.logo {
+margin: 20px auto 0 auto;
+text-align: center;
+}
+
+/* html,body,div,span,applet,object,iframe,h1,h2,h3,h4,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-shadow: 1px 0px 0px black;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+} */
+
+body {
+  font: 14px/22px Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 0px auto;
+  overflow-x: hidden;
+}
+
+label,
+a {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* label,
+#active,
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+} */
+
+#slider {
+  margin: 0 auto;
+}
+
+input {
+  display: none;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ #slides .inner {
+  margin-left: -400%;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+article img {
+  width: 100%;
+}
+
+#slides .inner {
+  width: 500%;
+  line-height: 0;
+}
+
+#slides article {
+  width: 20%;
+  float: left;
+}
+
+/* Кнопки перемотки слайдов */
+
+#controls label {
+  display: none;
+  width: 50px;
+  height: 58px;
+  opacity: 0.5;
+}
+
+#active {
+  margin: 23% 0 0;
+  text-align: center;
+}
+
+/* Нижние кнопки */
+
+#active label {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+}
+
+#active label:hover {
+  background: #ccc;
+  border-color: #777;
+}
+
+#controls label:hover {
+  opacity: 0.8;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(1) {
+  background: url('http://www.gkb4-tambov.ru/images/slaider/next.png') no-repeat;
+  float: right;
+  margin: 0 -70px 0 0;
+  display: block;
+}
+
+#slide1:checked ~ #controls label:nth-child(5),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4) {
+  background: url('http://www.gkb4-tambov.ru/images/slaider/prev.png') no-repeat;
+  float: left;
+  margin: 0 0 0 -70px;
+  display: block;
+}
+
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) {
+  background: #333;
+  border-color: #333;
+}
+
+/* Стили подписи */
+
+.info {
+  line-height: 20px;
+  margin: 0 0 -150%;
+  position: absolute;
+  font-style: italic;
+  padding: 30px 30px;
+  opacity: 0;
+  color: #000;
+  text-align: left;
+}
+
+.info h3 {
+  color: white;
+  margin: 0 0 5px;
+  font-weight: normal;
+  font-size: 22px;
+  font-style: normal;
+  text-shadow: 0 0 10px;
+}
+
+/* Стили слайдера */
+
+#slides {
+  margin: 0;
+  padding: 1%;
+  background: #fff;
+  background: rgb(252, 255, 244);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9', GradientType=0);
+  /* IE6-9 */
+}
+
+/* Анимации */
+
+#slides .inner {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  /* easeInOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  /* easeInOutQuart */
+}
+
+#controls label {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+#slide1:checked ~ #slides article:nth-child(1) .info,
+#slide2:checked ~ #slides article:nth-child(2) .info,
+#slide3:checked ~ #slides article:nth-child(3) .info,
+#slide4:checked ~ #slides article:nth-child(4) .info,
+#slide5:checked ~ #slides article:nth-child(5) .info {
+  opacity: 1;
+  -webkit-transition: all 1s ease-out 0.6s;
+  -moz-transition: all 1s ease-out 0.6s;
+  -o-transition: all 1s ease-out 0.6s;
+  transition: all 1s ease-out 0.6s;
+}
+
+.info,#controls,#slides,#active,#active label,.info h3,.desktop,.tablet,.mobile {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+/* Размеры экрана */
+
+#desktop:checked ~ #slider {
+  max-width: 960px;
+}
+
+#tablet:checked ~ #slider {
+  max-width: 850px;
+}
+
+#mobile:checked ~ #slider {
+  max-width: 450px;
+}
+
+/* Tablet */
+
+#tablet:checked ~ #slider #controls {
+  margin: -25% 0 0 12%;
+  width: 76%;
+  height: 50px;
+}
+
+#tablet:checked ~ #slider #active {
+  margin: 22% 0 0;
+}
+/* YouTube! */
+@import url(https://fonts.googleapis.com/css?family=Racing+Sans+One);
+.youtubediv {
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+  background: white;
+}
+.h1youtube {
+  text-align:center;
+  color:#ecf0f1;
+  font-family:'Racing Sans One', cursive;
+  text-shadow:0 2px 2px #0c0e50;
+}
+.youtube_videos{
+  list-style:none;
+  margin:0 auto;
+  display:block;
+  padding:0;
+}
+.youtube_videos .youtube{
+  display:inline-block;
+  margin-bottom:1em;
+  margin-right:0.5em;
+  margin-left:0.5em;
+  margin-top:0;
+  
+}
+.youtube,.thumb{
+  width:380px;
+  height:250px;
+  cursor:pointer;
+  position:relative;
+  -webkit-box-shadow:0 0.5px 2px #1D242B;
+  -moz-box-shadow:0 0.5px 2px #1D242B;
+  box-shadow:0 0.5px 2px #1D242B;
+}
+.youtube_video{
+  width:385px;
+  height:250px;
+}
+.thumb,.youtube_video{
+  padding:5px;
+  background:#34495e;
+  border:0;
+  outline:0;
+}
+.youtube:after{
+  content:"PLAY THIS VIDEO";
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:370px;
+  height:240px;
+  padding:0;
+  margin:0;
+  padding:5px;
+  background:rgba(38, 180, 174, 0.66);
+  text-align:center;
+  line-height:250px;
+  font-family:'Racing Sans One', cursive;
+  color:transparent;
+  -webkit-transition:all 0.8s ease;
+  -moz-transition:all 0.8s ease;
+  -o-transition:all 0.8s ease;
+  transition:all 0.8s ease;
+}
+.youtube:hover:after{
+  top:110px;
+  left:110px;
+  width:165px;
+  height:40px;
+  line-height:40px;
+  background:#34495e;
+  -webkit-transition:all 0.8s ease;
+  -moz-transition:all 0.8s ease;
+  -o-transition:all 0.8s ease;
+  transition:all 0.8s ease;
+  color:#ecf0f1;
+}
+
+
+/* = Responsive comming soon :)
+---------------------------------*/
+/* Desktop */
+@media (min-width:980px) {}
+/* Mobile */
+@media (max-width:480px) {}
+/* Tablet */
+@media (max-width:767px) {}
+@media (min-width:768px) and (max-width:979px) {}
